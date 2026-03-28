@@ -11,7 +11,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        version = "0.0.1";
+        version = "0.0.2";
 
         platformMap = {
           "x86_64-linux" = "x86_64-linux";
@@ -47,8 +47,7 @@
 
           installPhase = ''
             mkdir -p $out/bin
-            cp $src $out/bin/brightworker
-            chmod +x $out/bin/brightworker
+            install -m755 $src $out/bin/brightworker
           '';
 
           postFixup = ''
