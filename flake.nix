@@ -11,7 +11,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        version = "0.1.0";
+        version = "0.0.1";
 
         platformMap = {
           "x86_64-linux" = "x86_64-linux";
