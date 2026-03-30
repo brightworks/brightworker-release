@@ -11,7 +11,7 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        version = "0.0.5";
+        version = "0.0.6";
 
         platformMap = {
           "x86_64-linux" = "x86_64-linux";
@@ -20,7 +20,7 @@
 
         binary = pkgs.fetchurl {
           url = "https://github.com/brightworks/brightworker-release/releases/download/v${version}/brightworker-${platform}";
-          sha256 = "sha256-2dcirOBbxEzaT4nMyChTDqnRdW1wdQWUBNVXMY4UjNQ=";
+          sha256 = "sha256-gd0QoMYU7UUNHMNEihfD+N54CBHUz/o+2+xkJ0DFIPg=";
         };
 
         runtimeLibs = with pkgs; [
